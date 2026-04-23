@@ -1,4 +1,4 @@
-# Checkpoint 1 - Spring Boot CRUD (Pedidos)
+# Checkpoint 1 - Spring Boot CRUD (Pedidos) 
 
 Este projeto consiste em uma aplicação **RESTful API** desenvolvida com **Spring Boot** para gerenciar pedidos (`OrderModel`). O sistema realiza operações completas de CRUD, persistindo os dados em um banco de dados H2 e aplicando validações rigorosas nos campos de entrada.
 
