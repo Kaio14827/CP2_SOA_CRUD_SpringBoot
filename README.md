@@ -1,10 +1,11 @@
-# CP2_SOA_CRUD_SpringBoot
-Nome:Gustavo Viega
-rm555885
-Nome:Kaio Drago
-rm559065
-Nome:Gabriel Guilherme
-rm558638
+# ⚙️ CP2_SOA_CRUD_SpringBoot
+🧑‍🎓 Gustavo Viega RM 555885
+
+🧑‍🎓 Kaio Drago RM 559065
+
+🧑‍🎓 Gabriel Guilherme RM 558638
+
+## 📖 Etapas 
 Etapa 38 – Criar classe
 git add .
 git commit -m "Etapa 38: Criada classe OrderController anotada com @RestController"
