@@ -1,9 +1,13 @@
 # ⚙️ CP2_SOA_CRUD_SpringBoot
 🧑‍🎓 Gustavo Viega RM 555885
+
 🧑‍🎓 Kaio Drago RM 559065
+
 🧑‍🎓 Gabriel Guilherme RM 558638
+
 🧑‍🎓 Vitor Rivas Cardoso RM 556404
 
+🧑‍🎓 Gustavo Yuji RM 555034
 
 ## 📖 Etapas 
 Etapa 38 – Criar classe
