@@ -11,8 +11,8 @@
 
 ## 📖 Etapas 
 Etapa 38 – Criar classe
-git add .
-git commit -m "Etapa 38: Criada classe OrderController anotada com @RestController"
+- git add .
+- git commit -m "Etapa 38: Criada classe OrderController anotada com @RestController"
 
 Etapa 39 – Definir pacote correto
 git add .
