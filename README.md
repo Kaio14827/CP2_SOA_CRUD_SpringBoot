@@ -1,60 +1,53 @@
-# ⚙️ CP2_SOA_CRUD_SpringBoot
-🧑‍🎓 Gustavo Viega RM 555885
+# Checkpoint 1 - Spring Boot CRUD (Pedidos)
 
-👨‍🔬 Kaio Drago RM 559065
+Este projeto consiste em uma aplicação **RESTful API** desenvolvida com **Spring Boot** para gerenciar pedidos (`OrderModel`). O sistema realiza operações completas de CRUD, persistindo os dados em um banco de dados H2 e aplicando validações rigorosas nos campos de entrada.
 
-🧑‍🎓 Gabriel Guilherme RM 558638
+## 👥 Grupo de Desenvolvimento
+* **Gustavo Viega** - RM 555885
+* **Kaio Drago** - RM 559065
+* **Gabriel Guilherme** - RM 558638
+* **Vitor Rivas Cardoso** - RM 556404
+* **Gustavo Yuji** - RM 555034
 
-🧑‍🎓 Vitor Rivas Cardoso RM 556404
+## 🛠️ Tecnologias e Configurações
+* **Linguagem:** Java 21
+* **SDK:** JDK 21
+* **Build Automation:** Maven
+* **Dependências Principais:**
+    * **Spring Data JPA**: Para mapeamento objeto-relacional e persistência.
+    * **Lombok**: Para geração automática de Getters, Setters e Construtores.
+    * **H2 Database**: Banco de dados embutido para desenvolvimento.
+    * **Validation**: Para validação de restrições nos modelos.
+    * **Spring Web**: Para criação dos controladores REST.
 
-🧑‍🎓 Gustavo Yuji RM 555034
+## 📋 Regras de Negócio e Validações
+* **Identificação**: O `id` é a chave primária, gerada automaticamente pelo banco de dados via auto-incremento.
+* **Nome do Cliente**: Campo obrigatório; não pode ser enviado vazio.
+* **Data do Pedido**: Atribuída automaticamente com a data atual no momento da persistência, caso seja nula.
+* **Valor Total**: Deve ser um valor positivo e não pode ser inferior a 0.0.
 
-## 📖 Etapas 
-Etapa 38 – Criar classe
-- git add .
-- git commit -m
-- "Etapa 38: Criada classe OrderController anotada com @RestController"
+## 🚀 Como Utilizar
 
-Etapa 39 – Definir pacote correto
-- git add .
-- git commit -m "Etapa 39: Ajustado pacote da classe OrderController para br.com.fiap.checkpoint1.controller"
+### Configuração de Ambiente
+A aplicação está configurada para rodar na porta **8085**. 
 
-Etapa 40 – Corrigir nome do arquivo
-- git add .
-- git commit -m "Etapa 40: Renomeado arquivo para OrderController.java conforme convenção"
+### Endpoints da API
+Todos os endpoints respondem através do prefixo `/orders`.
 
-Etapa 41 – Criar variável 
-- git add .
-- git commit -m "Etapa 41: Criada variável private OrderService orderService em OrderController"
+| Operação | Método | URL | Descrição |
+| :--- | :--- | :--- | :--- |
+| **Criar** | `POST` | `/orders` | Cria um novo pedido com validação de corpo. |
+| **Listar** | `GET` | `/orders` | Retorna a lista completa de pedidos. |
+| **Buscar** | `GET` | `/orders/{id}` | Busca um pedido específico pelo ID. |
+| **Atualizar** | `PUT` | `/orders/{id}` | Atualiza nome e valor de um pedido existente. |
+| **Deletar** | `DELETE` | `/orders/{id}` | Remove um pedido do sistema por ID. |
 
-Etapa 42 – Adicionar @Autowired
-- git add .
-- git commit -m "Etapa 42: Adicionada anotação @Autowired sobre a variável orderService"
+### Console do Banco de Dados H2
+A interface gráfica do banco de dados pode ser acessada enquanto a aplicação estiver em execução:
+* **URL:** `http://localhost:8085/h2-console`
+* **JDBC URL:** `jdbc:h2:file:~/testdb`
+* **User:** `sa`
+* **Password:** `password`
 
-Etapa 43 – Criar método createOrder com try-catch
-- git add .
-- git commit -m "Etapa 43: Criado método createOrder com ResponseEntity<Object> e tratamento de IllegalArgumentException"
-
-Etapa 44 - Adicionar @GetMapping sobre o método readOrders 
-- git add .
-- git commit -m "Etapa 44: Adicionada anotação @GetMapping sobre o método readOrders para mapear requisições GET"
-
-Etapa 45 – Criar método readOrders
-- git add .
-- git commit -m "Etapa 45: Criado método readOrders retornando lista de pedidos via orderService.readAllOrders()"
-
-Etapa 46 – Adicionar @GetMapping sobre readOrders
-- git add .
-- git commit -m "Etapa 46: Adicionada anotação @GetMapping sobre o método readOrders"
-
-Etapa 47 – Criar método getOrder por ID
-- git add .
-- git commit -m "Etapa 47: Criado método getOrder com ResponseEntity<Object> e tratamento de EntityNotFoundException"
-
-Etapa 48 – Ajustar @GetMapping para /{code}
-- git add .
-- git commit -m "Etapa 48: Ajustado @GetMapping para /{code} no método getOrders"
-
-Etapa 49 – Criar método updateOrder com PUT
-- git add .
-- git commit -m "Etapa 49: Criado método updateOrder com ResponseEntity<Object> e tratamento de EntityNotFoundException"
+---
+**Nota Técnica:** O projeto utiliza a anotação `@Table(name = "Pedidos")` para mapear a entidade especificamente no banco de dados. A estrutura do banco é atualizada automaticamente conforme as alterações no modelo.
