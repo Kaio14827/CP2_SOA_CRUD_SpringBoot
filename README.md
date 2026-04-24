@@ -43,7 +43,7 @@ Todos os endpoints respondem através do prefixo `/orders`.
 
 ### 3. Console do Banco de Dados H2
 A interface gráfica do banco de dados pode ser acessada enquanto a aplicação estiver em execução:
-* **URL:** `http://localhost:8085/h2-console`
+* **URL:** `http://localhost:8085/h2-console `
 * **JDBC URL:** `jdbc:h2:file:~/testdb`
 * **User:** `sa`
 * **Password:** `password`
