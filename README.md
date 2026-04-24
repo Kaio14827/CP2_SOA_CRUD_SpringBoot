@@ -1,13 +1,13 @@
-# Checkpoint 1 - Spring Boot CRUD (Pedidos) 
+# Checkpoint 2 - Spring Boot CRUD (Pedidos) 
 
 Este projeto consiste em uma aplicação **RESTful API** desenvolvida com **Spring Boot** para gerenciar pedidos (`OrderModel`). O sistema realiza operações completas de CRUD, persistindo os dados em um banco de dados H2 e aplicando validações rigorosas nos campos de entrada.
 
 ## 👥 Grupo de Desenvolvimento
-* **Gustavo Viega** - RM 555885
-* **Kaio Drago** - RM 559065
-* **Gabriel Guilherme** - RM 558638
-* **Vitor Rivas Cardoso** - RM 556404
-* **Gustavo Yuji** - RM 555034
+- Gustavo Viega Martins Lopes **RM555885**
+- Kaio Drago Lima Souza **RM556095**
+- Gabriel Guilherme Leste **RM558638**
+- Vitor Rivas Cardoso **RM556404**
+- Gustavo Yuji **RM555034**
 
 ## 🛠️ Tecnologias e Configurações
 * **Linguagem:** Java 21
@@ -27,11 +27,10 @@ Este projeto consiste em uma aplicação **RESTful API** desenvolvida com **Spri
 * **Valor Total**: Deve ser um valor positivo e não pode ser inferior a 0.0.
 
 ## 🚀 Como Utilizar
-
-### Configuração de Ambiente
+### 1. Configuração de Ambiente
 A aplicação está configurada para rodar na porta **8085**. 
 
-### Endpoints da API
+### 2. Endpoints da API
 Todos os endpoints respondem através do prefixo `/orders`.
 
 | Operação | Método | URL | Descrição |
@@ -42,7 +41,7 @@ Todos os endpoints respondem através do prefixo `/orders`.
 | **Atualizar** | `PUT` | `/orders/{id}` | Atualiza nome e valor de um pedido existente. |
 | **Deletar** | `DELETE` | `/orders/{id}` | Remove um pedido do sistema por ID. |
 
-### Console do Banco de Dados H2
+### 3. Console do Banco de Dados H2
 A interface gráfica do banco de dados pode ser acessada enquanto a aplicação estiver em execução:
 * **URL:** `http://localhost:8085/h2-console`
 * **JDBC URL:** `jdbc:h2:file:~/testdb`
